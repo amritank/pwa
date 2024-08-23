@@ -21,14 +21,6 @@ export const putDb = async (content) => {
   const tx = jateDB.transaction('jate', 'readwrite');
   // open the desired object store
   const jateStore = tx.objectStore("jate");
-  // const getResult = await jateStore.get(1);
-  // console.log("result: ", getResult);
-  // let result;
-  // if (getResult) {
-
-  // } else {
-  //   result = await jateStore.add({ content });
-  // }
   const result = await jateStore.put({ id: 1, content });
   console.log("Data saved to the jate db: ", result);
 };
@@ -42,10 +34,10 @@ export const getDb = async () => {
   const tx = jateDB.transaction('jate', 'readonly');
   // open the desired object store
   const jateStore = tx.objectStore("jate");
-  const request = jateStore.get();
+  const request = jateStore.get(1);
   const result = await request;
   console.log("Data returned from the jate db: ", result);
-  return result;
+  return result?.content || null;
 
 };
 
