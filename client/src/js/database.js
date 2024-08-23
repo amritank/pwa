@@ -21,14 +21,15 @@ export const putDb = async (content) => {
   const tx = jateDB.transaction('jate', 'readwrite');
   // open the desired object store
   const jateStore = tx.objectStore("jate");
-  const getResult = await jateStore.get(1);
-  console.log("result: ", getResult);
-  let result;
-  if (getResult) {
-    result = await jateStore.put({ id: getResult.id, content });
-  } else {
-    result = await jateStore.add({ content });
-  }
+  // const getResult = await jateStore.get(1);
+  // console.log("result: ", getResult);
+  // let result;
+  // if (getResult) {
+
+  // } else {
+  //   result = await jateStore.add({ content });
+  // }
+  const result = await jateStore.put({ id: 1, content });
   console.log("Data saved to the jate db: ", result);
 };
 
