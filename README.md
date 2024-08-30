@@ -32,5 +32,13 @@ You can now start using the text editor, which will work both online and offline
 The data entered in the text editor is stored in the jate_db database using IndexedDB.
 This data can be inspected via the Developer Tools in the Application tab under IndexedDB.
 
+## Screenshot
+<img width="1728" alt="Screenshot 2024-08-30 at 4 08 24 PM" src="https://github.com/user-attachments/assets/99d55111-d664-44d7-ae65-d23cbe56a62d">
+
+
+## Deployed link
+https://pwa-g4xp.onrender.com
+
+
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
